@@ -1,0 +1,134 @@
+{
+  "Application": {
+    "Screens": [
+      {
+        "Name": "Main",
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "backgorund",
+            "Width": 480,
+            "Height": 272,
+            "RelativeFilename": "background.png"
+          },
+          {
+            "Type": "Video",
+            "Name": "video",
+            "X": 132,
+            "Y": 4,
+            "Width": 216,
+            "Height": 216,
+            "VideoFileName": "__designer\\SampleVideo2_216x216.avi",
+            "AutoPlay": true,
+            "Loop": true
+          },
+          {
+            "Type": "Button",
+            "Name": "play",
+            "X": 170,
+            "Y": 230,
+            "Width": 32,
+            "Height": 32,
+            "Pressed": "button_play_white.png",
+            "Released": "button_play_pink.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "pause",
+            "X": 278,
+            "Y": 230,
+            "Width": 32,
+            "Height": 32,
+            "Pressed": "button_pause_white.png",
+            "Released": "button_pause_pink.png"
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "PlayVideoButtonPressed",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "play"
+            },
+            "Action": {
+              "Type": "ActionPlay",
+              "ActionComponent": "video"
+            }
+          },
+          {
+            "InteractionName": "PauseVideoButtonPressed",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "pause"
+            },
+            "Action": {
+              "Type": "ActionPause",
+              "ActionComponent": "video"
+            }
+          }
+        ]
+      }
+    ],
+    "CustomContainerDefinitions": [],
+    "Name": "VideoExample",
+    "Resolution": {
+      "Width": 480,
+      "Height": 272
+    },
+    "SelectedColorDepth": 24,
+    "StartupScreenName": "Main",
+    "SelectedStartupLanguage": "GB",
+    "TouchGfxPath": "../Middlewares/ST/touchgfx",
+    "UIPath": ".",
+    "AvailableColorDepths": [
+      24
+    ],
+    "AvailableLCDs": {
+      "24": "LCD24bpp"
+    },
+    "AvailableSections": [
+      "ExtFlashSection",
+      "IntFlashSection"
+    ],
+    "AvailableResolutions": [
+      {
+        "Width": 480,
+        "Height": 272
+      }
+    ],
+    "PhysicalButtons": [],
+    "FrameworkFeatures": {
+      "LCD24bpp": {
+        "Id": "LCD24bpp",
+        "IsEnabled": true
+      }
+    },
+    "GenerateAssetsCommand": "make -f simulator/gcc/Makefile assets -j8",
+    "PostGenerateCommand": "touchgfx update_project --project-file=simulator/msvs/Application.vcxproj",
+    "PostGenerateTargetCommand": "touchgfx update_project",
+    "CompileSimulatorCommand": "make -f simulator/gcc/Makefile -j8",
+    "RunSimulatorCommand": "build\\bin\\simulator.exe",
+    "CompileTargetCommandOverride": "make -f ../gcc/Makefile -j8",
+    "FlashTargetCommandOverride": "make -f ../gcc/Makefile flash",
+    "FlashTargetIntCommandOverride": "make -f ../gcc/Makefile intflash",
+    "LandscapeSkinX": 0,
+    "LandscapeSkinY": 0,
+    "PortraitSkinX": 0,
+    "PortraitSkinY": 0,
+    "DisplayOrientation": "Landscape",
+    "Family": "STM32H7",
+    "SubFamily": "STM32H7A3/7B3",
+    "Toolchain": "EWARM V8.50",
+    "Platform": "m7",
+    "ProjectFile": "../STM32H7B3I-DK.ioc",
+    "OptionalComponentsRoot": "../Middlewares/ST/touchgfx_components",
+    "OptionalComponents": [],
+    "AdditionalFeatures": [
+      "CWRVector",
+      "VectorFonts",
+      "Video"
+    ]
+  },
+  "Version": "4.24.1",
+  "CreatedBy": "4.24.1"
+}

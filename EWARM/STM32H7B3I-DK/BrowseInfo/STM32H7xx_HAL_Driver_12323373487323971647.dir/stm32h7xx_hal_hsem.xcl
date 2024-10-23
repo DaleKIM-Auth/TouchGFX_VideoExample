@@ -49,13 +49,7 @@ C:\TouchGFXProjects\VideoExample\EWARM/../TouchGFX/generated/texts/include
 -I
 C:\TouchGFXProjects\VideoExample\EWARM/../TouchGFX/gui/include
 -I
-C:\TouchGFXProjects\VideoExample\EWARM/../LIBJPEG/App
--I
-C:\TouchGFXProjects\VideoExample\EWARM/../LIBJPEG/Target
--I
 C:\TouchGFXProjects\VideoExample\EWARM/../Utilities/JPEG
--I
-C:\TouchGFXProjects\VideoExample\EWARM/../Middlewares/Third_Party/LibJPEG/include
 -I
 C:\TouchGFXProjects\VideoExample\EWARM/../TouchGFX/generated/videos/include
 -I
@@ -103,13 +97,7 @@ C:\TouchGFXProjects\VideoExample\TouchGFX\generated\texts\include
 -I
 C:\TouchGFXProjects\VideoExample\TouchGFX\gui\include
 -I
-C:\TouchGFXProjects\VideoExample\LIBJPEG\App
--I
-C:\TouchGFXProjects\VideoExample\LIBJPEG\Target
--I
 C:\TouchGFXProjects\VideoExample\Utilities\JPEG
--I
-C:\TouchGFXProjects\VideoExample\Middlewares\Third_Party\LibJPEG\include
 -I
 C:\TouchGFXProjects\VideoExample\TouchGFX\generated\videos\include
 -D__CHAR_BITS__=8

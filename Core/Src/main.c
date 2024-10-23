@@ -20,7 +20,6 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "cmsis_os.h"
-#include "libjpeg.h"
 #include "app_touchgfx.h"
 
 /* Private includes ----------------------------------------------------------*/
@@ -163,7 +162,6 @@ int main(void)
   MX_FMC_Init();
   MX_CRC_Init();
   MX_JPEG_Init();
-  MX_LIBJPEG_Init();
   MX_TouchGFX_Init();
   /* Call PreOsInit function */
   MX_TouchGFX_PreOSInit();

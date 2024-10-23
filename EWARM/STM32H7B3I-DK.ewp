@@ -377,10 +377,7 @@
                     <state>$PROJ_DIR$/../TouchGFX/generated/images/include</state>
                     <state>$PROJ_DIR$/../TouchGFX/generated/texts/include</state>
                     <state>$PROJ_DIR$/../TouchGFX/gui/include</state>
-                    <state>$PROJ_DIR$/../LIBJPEG/App</state>
-                    <state>$PROJ_DIR$/../LIBJPEG/Target</state>
                     <state>$PROJ_DIR$/../Utilities/JPEG</state>
-                    <state>$PROJ_DIR$/../Middlewares/Third_Party/LibJPEG/include</state>
                     <state>$PROJ_DIR$/../TouchGFX/generated/videos/include</state>
                 </option>
                 <option>
@@ -1124,10 +1121,13 @@
             <group>
                 <name>Core</name>
                 <file>
+                    <name>$PROJ_DIR$\..\Core\Src\main.c</name>
+                </file>
+                <file>
                     <name>$PROJ_DIR$\..\Core\Src\freertos.c</name>
                 </file>
                 <file>
-                    <name>$PROJ_DIR$\..\Core\Src\main.c</name>
+                    <name>$PROJ_DIR$\..\Core\Src\stm32h7xx_it.c</name>
                 </file>
                 <file>
                     <name>$PROJ_DIR$\..\Core\Src\stm32h7xx_hal_msp.c</name>
@@ -1135,18 +1135,6 @@
                 <file>
                     <name>$PROJ_DIR$\..\Core\Src\stm32h7xx_hal_timebase_tim.c</name>
                 </file>
-                <file>
-                    <name>$PROJ_DIR$\..\Core\Src\stm32h7xx_it.c</name>
-                </file>
-            </group>
-            <group>
-                <name>LIBJPEG</name>
-                <group>
-                    <name>App</name>
-                    <file>
-                        <name>$PROJ_DIR$\..\LIBJPEG\App\libjpeg.c</name>
-                    </file>
-                </group>
             </group>
             <group>
                 <name>TouchGFX</name>
@@ -1161,15 +1149,6 @@
                     <group>
                         <name>generated</name>
                         <file>
-                            <name>$PROJ_DIR$\..\TouchGFX\target\generated\HardwareMJPEGDecoder.cpp</name>
-                        </file>
-                        <file>
-                            <name>$PROJ_DIR$\..\TouchGFX\target\generated\OSWrappers.cpp</name>
-                        </file>
-                        <file>
-                            <name>$PROJ_DIR$\..\TouchGFX\target\generated\STM32DMA.cpp</name>
-                        </file>
-                        <file>
                             <name>$PROJ_DIR$\..\TouchGFX\target\generated\tgfx_jpeg_utils.c</name>
                         </file>
                         <file>
@@ -1178,18 +1157,27 @@
                         <file>
                             <name>$PROJ_DIR$\..\TouchGFX\target\generated\TouchGFXGeneratedHAL.cpp</name>
                         </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\TouchGFX\target\generated\STM32DMA.cpp</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\TouchGFX\target\generated\OSWrappers.cpp</name>
+                        </file>
+                        <file>
+                            <name>$PROJ_DIR$\..\TouchGFX\target\generated\HardwareMJPEGDecoder.cpp</name>
+                        </file>
                     </group>
                     <file>
                         <name>$PROJ_DIR$\..\TouchGFX\target\CortexMMCUInstrumentation.cpp</name>
+                    </file>
+                    <file>
+                        <name>$PROJ_DIR$\..\TouchGFX\target\TouchGFXHAL.cpp</name>
                     </file>
                     <file>
                         <name>$PROJ_DIR$\..\TouchGFX\target\STM32TouchController.cpp</name>
                     </file>
                     <file>
                         <name>$PROJ_DIR$\..\TouchGFX\target\TouchGFXGPIO.cpp</name>
-                    </file>
-                    <file>
-                        <name>$PROJ_DIR$\..\TouchGFX\target\TouchGFXHAL.cpp</name>
                     </file>
                 </group>
             </group>
@@ -1202,25 +1190,25 @@
             <group>
                 <name>Components</name>
                 <file>
+                    <name>$PROJ_DIR$\..\Drivers\BSP\Components\mx25lm51245g\mx25lm51245g.c</name>
+                </file>
+                <file>
                     <name>$PROJ_DIR$\..\Drivers\BSP\Components\ft5336\ft5336.c</name>
                 </file>
                 <file>
                     <name>$PROJ_DIR$\..\Drivers\BSP\Components\ft5336\ft5336_reg.c</name>
                 </file>
-                <file>
-                    <name>$PROJ_DIR$\..\Drivers\BSP\Components\mx25lm51245g\mx25lm51245g.c</name>
-                </file>
             </group>
             <group>
                 <name>STM32H7B3I-DK</name>
-                <file>
-                    <name>$PROJ_DIR$\..\Drivers\BSP\STM32H7B3I-DK\stm32h7b3i_discovery_bus.c</name>
-                </file>
                 <file>
                     <name>$PROJ_DIR$\..\Drivers\BSP\STM32H7B3I-DK\stm32h7b3i_discovery_ospi.c</name>
                 </file>
                 <file>
                     <name>$PROJ_DIR$\..\Drivers\BSP\STM32H7B3I-DK\stm32h7b3i_discovery_ts.c</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\Drivers\BSP\STM32H7B3I-DK\stm32h7b3i_discovery_bus.c</name>
                 </file>
             </group>
         </group>
@@ -1233,9 +1221,6 @@
         <group>
             <name>STM32H7xx_HAL_Driver</name>
             <file>
-                <name>$PROJ_DIR$\..\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal.c</name>
-            </file>
-            <file>
                 <name>$PROJ_DIR$\..\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_cortex.c</name>
             </file>
             <file>
@@ -1245,19 +1230,10 @@
                 <name>$PROJ_DIR$\..\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_crc_ex.c</name>
             </file>
             <file>
-                <name>$PROJ_DIR$\..\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_dma.c</name>
+                <name>$PROJ_DIR$\..\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_rcc.c</name>
             </file>
             <file>
-                <name>$PROJ_DIR$\..\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_dma2d.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_dma_ex.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_dsi.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_exti.c</name>
+                <name>$PROJ_DIR$\..\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_rcc_ex.c</name>
             </file>
             <file>
                 <name>$PROJ_DIR$\..\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_flash.c</name>
@@ -1272,10 +1248,40 @@
                 <name>$PROJ_DIR$\..\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_hsem.c</name>
             </file>
             <file>
+                <name>$PROJ_DIR$\..\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_dma.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_dma_ex.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_mdma.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_pwr.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_pwr_ex.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal.c</name>
+            </file>
+            <file>
                 <name>$PROJ_DIR$\..\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_i2c.c</name>
             </file>
             <file>
                 <name>$PROJ_DIR$\..\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_i2c_ex.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_exti.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_dma2d.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_ll_fmc.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_sdram.c</name>
             </file>
             <file>
                 <name>$PROJ_DIR$\..\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_jpeg.c</name>
@@ -1287,34 +1293,16 @@
                 <name>$PROJ_DIR$\..\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_ltdc_ex.c</name>
             </file>
             <file>
-                <name>$PROJ_DIR$\..\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_mdma.c</name>
+                <name>$PROJ_DIR$\..\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_dsi.c</name>
             </file>
             <file>
                 <name>$PROJ_DIR$\..\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_ospi.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_pwr.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_pwr_ex.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_rcc.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_rcc_ex.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_sdram.c</name>
             </file>
             <file>
                 <name>$PROJ_DIR$\..\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_tim.c</name>
             </file>
             <file>
                 <name>$PROJ_DIR$\..\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_hal_tim_ex.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\Drivers\STM32H7xx_HAL_Driver\Src\stm32h7xx_ll_fmc.c</name>
             </file>
         </group>
     </group>
@@ -1323,25 +1311,13 @@
         <group>
             <name>FreeRTOS</name>
             <file>
-                <name>$PROJ_DIR$\..\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS_V2\cmsis_os2.c</name>
-            </file>
-            <file>
                 <name>$PROJ_DIR$\..\Middlewares\Third_Party\FreeRTOS\Source\croutine.c</name>
             </file>
             <file>
                 <name>$PROJ_DIR$\..\Middlewares\Third_Party\FreeRTOS\Source\event_groups.c</name>
             </file>
             <file>
-                <name>$PROJ_DIR$\..\Middlewares\Third_Party\FreeRTOS\Source\portable\MemMang\heap_4.c</name>
-            </file>
-            <file>
                 <name>$PROJ_DIR$\..\Middlewares\Third_Party\FreeRTOS\Source\list.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\Middlewares\Third_Party\FreeRTOS\Source\portable\IAR\ARM_CM4F\port.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\Middlewares\Third_Party\FreeRTOS\Source\portable\IAR\ARM_CM4F\portasm.s</name>
             </file>
             <file>
                 <name>$PROJ_DIR$\..\Middlewares\Third_Party\FreeRTOS\Source\queue.c</name>
@@ -1355,146 +1331,17 @@
             <file>
                 <name>$PROJ_DIR$\..\Middlewares\Third_Party\FreeRTOS\Source\timers.c</name>
             </file>
-        </group>
-        <group>
-            <name>LibJPEG</name>
             <file>
-                <name>$PROJ_DIR$\..\Middlewares\Third_Party\LibJPEG\source\jaricom.c</name>
+                <name>$PROJ_DIR$\..\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS_V2\cmsis_os2.c</name>
             </file>
             <file>
-                <name>$PROJ_DIR$\..\Middlewares\Third_Party\LibJPEG\source\jcapimin.c</name>
+                <name>$PROJ_DIR$\..\Middlewares\Third_Party\FreeRTOS\Source\portable\MemMang\heap_4.c</name>
             </file>
             <file>
-                <name>$PROJ_DIR$\..\Middlewares\Third_Party\LibJPEG\source\jcapistd.c</name>
+                <name>$PROJ_DIR$\..\Middlewares\Third_Party\FreeRTOS\Source\portable\IAR\ARM_CM4F\port.c</name>
             </file>
             <file>
-                <name>$PROJ_DIR$\..\Middlewares\Third_Party\LibJPEG\source\jcarith.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\Middlewares\Third_Party\LibJPEG\source\jccoefct.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\Middlewares\Third_Party\LibJPEG\source\jccolor.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\Middlewares\Third_Party\LibJPEG\source\jcdctmgr.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\Middlewares\Third_Party\LibJPEG\source\jchuff.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\Middlewares\Third_Party\LibJPEG\source\jcinit.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\Middlewares\Third_Party\LibJPEG\source\jcmainct.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\Middlewares\Third_Party\LibJPEG\source\jcmarker.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\Middlewares\Third_Party\LibJPEG\source\jcmaster.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\Middlewares\Third_Party\LibJPEG\source\jcomapi.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\Middlewares\Third_Party\LibJPEG\source\jcparam.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\Middlewares\Third_Party\LibJPEG\source\jcprepct.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\Middlewares\Third_Party\LibJPEG\source\jcsample.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\Middlewares\Third_Party\LibJPEG\source\jctrans.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\Middlewares\Third_Party\LibJPEG\source\jdapimin.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\Middlewares\Third_Party\LibJPEG\source\jdapistd.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\Middlewares\Third_Party\LibJPEG\source\jdarith.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\Middlewares\Third_Party\LibJPEG\source\jdatadst.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\Middlewares\Third_Party\LibJPEG\source\jdatasrc.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\Middlewares\Third_Party\LibJPEG\source\jdcoefct.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\Middlewares\Third_Party\LibJPEG\source\jdcolor.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\Middlewares\Third_Party\LibJPEG\source\jddctmgr.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\Middlewares\Third_Party\LibJPEG\source\jdhuff.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\Middlewares\Third_Party\LibJPEG\source\jdinput.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\Middlewares\Third_Party\LibJPEG\source\jdmainct.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\Middlewares\Third_Party\LibJPEG\source\jdmarker.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\Middlewares\Third_Party\LibJPEG\source\jdmaster.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\Middlewares\Third_Party\LibJPEG\source\jdmerge.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\Middlewares\Third_Party\LibJPEG\source\jdpostct.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\Middlewares\Third_Party\LibJPEG\source\jdsample.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\Middlewares\Third_Party\LibJPEG\source\jdtrans.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\Middlewares\Third_Party\LibJPEG\source\jerror.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\Middlewares\Third_Party\LibJPEG\source\jfdctflt.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\Middlewares\Third_Party\LibJPEG\source\jfdctfst.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\Middlewares\Third_Party\LibJPEG\source\jfdctint.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\Middlewares\Third_Party\LibJPEG\source\jidctflt.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\Middlewares\Third_Party\LibJPEG\source\jidctfst.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\Middlewares\Third_Party\LibJPEG\source\jidctint.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\Middlewares\Third_Party\LibJPEG\source\jmemmgr.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\Middlewares\Third_Party\LibJPEG\source\jmemnobs.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\Middlewares\Third_Party\LibJPEG\source\jquant1.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\Middlewares\Third_Party\LibJPEG\source\jquant2.c</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\Middlewares\Third_Party\LibJPEG\source\jutils.c</name>
+                <name>$PROJ_DIR$\..\Middlewares\Third_Party\FreeRTOS\Source\portable\IAR\ARM_CM4F\portasm.s</name>
             </file>
         </group>
     </group>
